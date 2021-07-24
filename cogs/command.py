@@ -34,7 +34,6 @@ class Example(commands.Cog):
             return await ctx.reply(embed=embed)
         for i in pend:
             if i.id == query:
-                print(i.date)
                 embed = discord.Embed(
                     title=i.id,
                     description=self.get_time(data=i.date) + f"\n[Invite](https://discord.com/oauth2/authorize?client_id={i.id}&scope=bot&permissions=0&guild_id=653083797763522580&disable_guild_select=true)"
